@@ -1,12 +1,34 @@
 "Baby_Crisis" by Brandon Gomez and Antony Robbins
 
-
+numCrumbs is a number variable. numCrumbs is 0.
+numLegos is a number variable. numLegos is 0.
 
 [your room]
 
-The Bed is a room. East of The Bed is Bedroom Floor. 
+[Every turn:
+	Say "[numCrumbs]"]
+
+The Bed is a room. 
+A Pillow is in The Bed. The Pillow is scenery.
+A piece of string is in The Bed.
+
+A locked, openable, lockable door called the end of the bed is east of the bed and west of bedroom floor.
+
+[If player is carrying a piece of string:
+	the end of the bed is now unlocked;]
+
+Instead of opening the end of the bed:
+	If the end of the bed is locked:
+		say "I can't go down there, I will die";
+	Otherwise:
+		say "Imma go down".
+	
 
 Cereal is a room. North of the Cereal is the Bedroom Floor.
+Crumbs is in Cereal.
+Instead of taking Crumbs:
+	remove Crumbs from play;
+	now numCrumbs is numCrumbs + 3.
 
 Bedroom Floor is a room. East of The Bedroom Floor is North Hallway.
 
@@ -20,12 +42,17 @@ Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in 
 [hallway]
 
 North Hallway is a room. South of the North Hallway is Middle Hallway.
+Your dog is in the North Hallway.
+
+Shoes is a room. South of the Shoes is the North Hallway.
 
 Middle Hallway is a room. South of the Middle Hallway is South Hallway.
+A plant is in the Middle Hallway.
 
 South Hallway is a room. East of the South Hallway is the Baby's Floor.
+A Box of Legos is in the room.
 
-The Main Hallway is a region. North Hallway, Middle Hallway and South Hallway is in The Main Hallway.
+The Main Hallway is a region. North Hallway, shoes, Middle Hallway and South Hallway is in The Main Hallway.
 
 
 
