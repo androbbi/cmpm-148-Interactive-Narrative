@@ -1,1 +1,45 @@
-hi
+"Baby_Crisis" by Brandon Gomez and Antony Robbins
+
+
+
+[your room]
+
+The Bed is a room. East of The Bed is Bedroom Floor. 
+
+Cereal is a room. North of the Cereal is the Bedroom Floor.
+
+Bedroom Floor is a room. East of The Bedroom Floor is North Hallway.
+
+Pile of Clothes is a room. South of the Pile of Clothes is the Bedroom Floor.
+
+Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in Your Room.
+
+
+
+
+[hallway]
+
+North Hallway is a room. South of the North Hallway is Middle Hallway.
+
+Middle Hallway is a room. South of the Middle Hallway is South Hallway.
+
+South Hallway is a room. East of the South Hallway is the Baby's Floor.
+
+The Main Hallway is a region. North Hallway, Middle Hallway and South Hallway is in The Main Hallway.
+
+
+
+
+[baby's room]
+
+Baby's Floor is a room. South of Baby's Floor is the Crib.
+
+Crib is a room. North of the Crib is the Baby's Floor.
+
+Trash is a room. West of the Trash is the Baby's Floor.
+
+Stuffed Animals is a room. South of Stuffed Animals is the Baby's Floor.
+
+Changing Table is a room. Southwest of Changing Table is Baby's Floor.
+
+Baby's Room is a region. Baby's Floor, Crib, Changing Table, Trash and Stuffed Animals is in Baby's Room.
