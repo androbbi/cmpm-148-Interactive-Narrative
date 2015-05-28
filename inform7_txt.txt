@@ -1,5 +1,5 @@
 "Baby_Crisis" by Brandon Gomez and Antony Robbins
-[new edit]
+
 numCrumbs is a number variable. numCrumbs is 0.
 numLegos is a number variable. numLegos is 0.
 
@@ -84,7 +84,7 @@ Nest is a room. South of Nest is the Main Den.
 
 Narrow Exit is a room. West of Narrow Exit is Main Den. South of Narrow Exit is Stuffed Animals.
 
-The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Hole and Main Den is in The Mouse Tunnel.
+The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Exit and Main Den is in The Mouse Tunnel.
 
 [baby's room]
 
