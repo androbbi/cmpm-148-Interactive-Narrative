@@ -63,13 +63,18 @@ Middle Hallway is a room. South of the Middle Hallway is South Hallway.
 Tall Cactus is a room.
 A locked door called the base of the pot is west of the Middle Hallway and east of Tall Cactus.
 
+A locked door called the entrance is east of the Middle Hallway and west of Mouse Hole.
+
 South Hallway is a room. East of the South Hallway is the Baby's Floor.
 A Box of Legos is in the room.
 
 The Main Hallway is a region. North Hallway, shoes, Stairs, Tall Cactus, Middle Hallway and South Hallway is in The Main Hallway.
 
+[mouse hole]
 
+Mouse Hole is a room.
 
+The Mouse Tunnel is a region. Mouse Hole is in The Mouse Tunnel
 
 [baby's room]
 
