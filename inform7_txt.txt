@@ -65,10 +65,14 @@ A locked door called the base of the pot is west of the Middle Hallway and east 
 
 A locked door called the entrance is east of the Middle Hallway and west of Mouse Hole.
 
-South Hallway is a room. East of the South Hallway is the Baby's Floor.
-A Box of Legos is in the room.
+South Hallway is a room.
 
-The Main Hallway is a region. North Hallway, shoes, Stairs, Tall Cactus, Middle Hallway and South Hallway is in The Main Hallway.
+A Box of Legos is a room. North of the box of Legos is the south hallway.
+
+A locked door called the baby's door is east of the south hallway and west of the baby's floor.
+
+The Main Hallway is a region. North Hallway, shoes, Stairs, Tall Cactus, a box of legos, Middle Hallway and South Hallway is in The Main Hallway.
+
 
 [mouse hole]
 
@@ -78,9 +82,18 @@ The Mouse Tunnel is a region. Mouse Hole is in The Mouse Tunnel
 
 [baby's room]
 
-Baby's Floor is a room. South of Baby's Floor is the Crib.
+Baby's Floor is a room. 
 
-Crib is a room. North of the Crib is the Baby's Floor.
+Crib is a room. 
+
+A locked, openable, lockable door called the crib pathway is north of the crib and south of the baby's floor.
+
+Every turn when the player is in the baby's floor:
+	If numLegos is greater than 10:
+		say "With my Legos, I can create a staircase to the crib";
+		now the crib pathway is unlocked;
+	otherwise:
+		say "If only I knew how to get up there".
 
 Trash is a room. West of the Trash is the Baby's Floor.
 
