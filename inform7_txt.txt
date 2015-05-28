@@ -59,12 +59,14 @@ Every turn when the player is in the North Hallway:
 Shoes is a room. South of the Shoes is the North Hallway.
 
 Middle Hallway is a room. South of the Middle Hallway is South Hallway.
-A plant is in the Middle Hallway.
+
+Tall Cactus is a room.
+A locked door called the base of the pot is west of the Middle Hallway and east of Tall Cactus.
 
 South Hallway is a room. East of the South Hallway is the Baby's Floor.
 A Box of Legos is in the room.
 
-The Main Hallway is a region. North Hallway, shoes, Middle Hallway and South Hallway is in The Main Hallway.
+The Main Hallway is a region. North Hallway, shoes, Stairs, Tall Cactus, Middle Hallway and South Hallway is in The Main Hallway.
 
 
 
