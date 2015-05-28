@@ -76,9 +76,15 @@ The Main Hallway is a region. North Hallway, shoes, Stairs, Tall Cactus, a box o
 
 [mouse hole]
 
-Mouse Hole is a room.
+Mouse Hole is a room.  East of Mouse Hole is the Main Den.
 
-The Mouse Tunnel is a region. Mouse Hole is in The Mouse Tunnel
+Main Den is a room. West of Main Den is  the Mouse Hole.
+
+Nest is a room. South of Nest is the Main Den.
+
+Narrow Exit is a room. West of Narrow Exit is Main Den. South of Narrow Exit is Stuffed Animals.
+
+The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Hole and Main Den is in The Mouse Tunnel.
 
 [baby's room]
 
