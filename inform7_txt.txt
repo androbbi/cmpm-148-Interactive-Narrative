@@ -46,6 +46,9 @@ Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in 
 North Hallway is a room. South of the North Hallway is Middle Hallway.
 Your dog is in the North Hallway.
 
+Stairs is a room. 
+A locked door called the top of the stairs is west of the Stairs and east of North Hallway.
+
 Every turn when the player is in the North Hallway:
 	If player is not carrying lint:
 		say "You try to go in the hallway, but it is way to slippery and you slip and slid back to your room";
