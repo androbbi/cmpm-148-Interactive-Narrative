@@ -14,35 +14,42 @@ A piece of string is in The Bed.
 
 A locked, openable, lockable door called the end of the bed is east of the bed and west of bedroom floor.
 
-[If player is carrying a piece of string:
-	the end of the bed is now unlocked;]
+Every turn when the player is in the bed:
+	If player is carrying a piece of string:
+		now the end of the bed is unlocked.
 
 Instead of opening the end of the bed:
 	If the end of the bed is locked:
 		say "I can't go down there, I will die";
 	Otherwise:
-		say "Imma go down".
+		say "Imma go down";
+		move player to the bedroom floor.
 	
-
 Cereal is a room. North of the Cereal is the Bedroom Floor.
 Crumbs is in Cereal.
 Instead of taking Crumbs:
 	remove Crumbs from play;
 	now numCrumbs is numCrumbs + 3.
 
-Bedroom Floor is a room. East of The Bedroom Floor is North Hallway.
+Bedroom Floor is a room. 
+
+A openable door called your bedroom door is east of the bedroom floor and west of the north hallway.
 
 Pile of Clothes is a room. South of the Pile of Clothes is the Bedroom Floor.
+Lint is inside pile of clothes.
 
 Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in Your Room.
-
-
 
 
 [hallway]
 
 North Hallway is a room. South of the North Hallway is Middle Hallway.
 Your dog is in the North Hallway.
+
+Every turn when the player is in the North Hallway:
+	If player is not carrying lint:
+		say "You try to go in the hallway, but it is way to slippery and you slip and slid back to your room";
+		move player to the bedroom floor.
 
 Shoes is a room. South of the Shoes is the North Hallway.
 
