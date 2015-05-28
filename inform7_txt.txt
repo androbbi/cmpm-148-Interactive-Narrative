@@ -3,21 +3,28 @@
 numCrumbs is a number variable. numCrumbs is 0.
 numLegos is a number variable. numLegos is 0.
 
+After taking inventory when the number of things carried by the player is greater than zero:
+	if numCrumbs is greater than zero:
+		say "  [numCrumbs] crumbs";
+	if numLegos is greater than zero:
+		say "  [numLegos] legos".
+		
 [your room]
 
-[Every turn:
-	Say "[numCrumbs]"]
-
 The Bed is a room. 
-A Pillow is in The Bed. The Pillow is scenery.
-A piece of string is in The Bed.
-
+A pillow is in The Bed.
+A string is in The Bed but the string is hidden.
+Instead of taking the pillow:
+	say "I think I will just leave my [noun] here, it is way too big.".
+Instead of looking under the pillow for the first time:
+	now the string is in the bed;
+	now the player is carrying string;
+	say "You found a piece of string!";
+	say "You take the string.".
 A locked, openable, lockable door called the end of the bed is east of the bed and west of bedroom floor.
-
 Every turn when the player is in the bed:
-	If player is carrying a piece of string:
+	If player is carrying the string:
 		now the end of the bed is unlocked.
-
 Instead of opening the end of the bed:
 	If the end of the bed is locked:
 		say "I can't go down there, I will die";
@@ -28,17 +35,36 @@ Instead of opening the end of the bed:
 		say "I can't get up there anymore.".
 	
 Cereal is a room. North of the Cereal is the Bedroom Floor.
-Crumbs is in Cereal.
-Instead of taking Crumbs:
-	remove Crumbs from play;
+Cereal Crumbs is in Cereal.
+Instead of taking Cereal Crumbs:
+	remove Cereal Crumbs from play;
 	now numCrumbs is numCrumbs + 3.
 
 Bedroom Floor is a room. 
-
-A openable door called your bedroom door is east of the bedroom floor and west of the north hallway.
+A pencil is in the Bedroom Floor.
+Your computer is in the bedroom floor.
+Your Expressive Processing book is in the bedroom floor.
+A sticker is in the bedroom floor but it is hidden.
+Instead of looking under Your Expressive Processing book for the first time:
+	now the sticker is in the bedroom floor;
+	now the player is carrying a sticker;
+	say "You found a sticker underneath the book!";
+	say "You take the sticker.".
+Floor crumbs is in the bedroom floor.
+Instead of taking floor Crumbs:
+	remove floor Crumbs from play;
+	now numCrumbs is numCrumbs + 3.
+Instead of taking your computer:
+	say "I think I will just leave my [noun] here, it is way too big.".
+Instead of taking the pencil:
+	say "I think I will just leave my [noun] here, it is way too big.".
+Instead of taking your expressive processing book:
+	say "I think I will just leave my [noun] here, it is way too big.".
 
 Pile of Clothes is a room. South of the Pile of Clothes is the Bedroom Floor.
-Lint is inside pile of clothes.
+lint is in pile of clothes.
+
+A openable door called your bedroom door is east of the bedroom floor and west of the north hallway.
 
 Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in Your Room.
 
@@ -46,7 +72,15 @@ Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in 
 [hallway]
 
 North Hallway is a room. South of the North Hallway is Middle Hallway.
-Your dog is in the North Hallway.
+Instead of taking your dog:
+	say "I think I will just leave my [noun] here, it is way too big.".
+lint souls is wearable in the North Hallway.
+Every turn when the player is in the North Hallway:
+	If player is not carrying lint or the player is not carrying a sticker:
+		say "You try to go in the hallway, but it is way to slippery and you slip and slid back to your room.";
+		move player to the bedroom floor;
+	Otherwise:
+		say "You see that the floor is slippery so you craft your own traction control shoes by using your sticker and lint.";
 
 Stairs is a room. 
 A locked door called the top of the stairs is west of the Stairs and east of North Hallway.
