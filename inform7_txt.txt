@@ -38,6 +38,7 @@ Cereal is a room. North of the Cereal is the Bedroom Floor.
 Cereal Crumbs is in Cereal.
 Instead of taking Cereal Crumbs:
 	remove Cereal Crumbs from play;
+	say "taken";
 	now numCrumbs is numCrumbs + 3.
 
 Bedroom Floor is a room. 
@@ -53,6 +54,7 @@ Instead of looking under Your Expressive Processing book for the first time:
 Floor crumbs is in the bedroom floor.
 Instead of taking floor Crumbs:
 	remove floor Crumbs from play;
+	say "taken";
 	now numCrumbs is numCrumbs + 3.
 Instead of taking your computer:
 	say "I think I will just leave my [noun] here, it is way too big.".
@@ -74,7 +76,6 @@ Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in 
 North Hallway is a room. South of the North Hallway is Middle Hallway.
 Instead of taking your dog:
 	say "I think I will just leave my [noun] here, it is way too big.".
-lint souls is wearable in the North Hallway.
 Every turn when the player is in the North Hallway:
 	If player is not carrying lint or the player is not carrying a sticker:
 		say "You try to go in the hallway, but it is way to slippery and you slip and slid back to your room.";
@@ -102,6 +103,11 @@ A locked door called the entrance is east of the Middle Hallway and west of Mous
 South Hallway is a room.
 
 A Box of Legos is a room. North of the box of Legos is the south hallway.
+blocks is inside the box of legos.
+instead of taking blocks:
+	remove blocks from play;
+	say "legos taken";
+	now numLegos is numLegos + 5.
 
 A locked door called the baby's door is east of the south hallway and west of the baby's floor.
 
@@ -124,7 +130,28 @@ The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Exit and Main Den is in 
 
 Baby's Floor is a room. 
 
+Trash is a room. West of the Trash is the Baby's Floor.
+
+Stuffed Animals is a room. South of Stuffed Animals is the Baby's Floor.
+Red blocks is in the stuffed animals but it is hidden.
+Instead of looking under the stuffed animals for the first time:
+	now the red blocks is in the stuffed animals;
+	say "You found some legos!";
+	say "You took the legos.";
+	now numLegos is numlegos + 2.
+
+Changing Table is a room. Southwest of Changing Table is Baby's Floor.
+Blue blocks is in the Changing table but it is hidden.
+Instead of looking under the changing table for the first time:
+	now the blue blocks is in the changing table;
+	say "You found some legos!";
+	say "You took the legos.";
+	now numLegos is numlegos + 3.
+	
 Crib is a room. 
+Your step-sibling is in the crib.
+Instead of taking your step-sibling:
+	say "lets just leave them there".
 
 A locked, openable, lockable door called the crib pathway is north of the crib and south of the baby's floor.
 
@@ -134,11 +161,5 @@ Every turn when the player is in the baby's floor:
 		now the crib pathway is unlocked;
 	otherwise:
 		say "If only I knew how to get up there".
-
-Trash is a room. West of the Trash is the Baby's Floor.
-
-Stuffed Animals is a room. South of Stuffed Animals is the Baby's Floor.
-
-Changing Table is a room. Southwest of Changing Table is Baby's Floor.
 
 Baby's Room is a region. Baby's Floor, Crib, Changing Table, Trash and Stuffed Animals is in Baby's Room.
