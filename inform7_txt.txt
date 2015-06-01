@@ -135,7 +135,7 @@ Baby's Floor is a room.
 Trash is a room. West of the Trash is the Baby's Floor.
 
 Stuffed Animals is a room. South of Stuffed Animals is the Baby's Floor.
-Red blocks is in the stuffed animals but it is hidden.
+Red blocks is in the stuffed animals but it is hidden. The description is "Hmm, I can use these to get to the crib.".
 Instead of looking under the stuffed animals for the first time:
 	now the red blocks is in the stuffed animals;
 	say "You found some legos!";
@@ -143,7 +143,7 @@ Instead of looking under the stuffed animals for the first time:
 	now numLegos is numlegos + 2.
 
 Changing Table is a room. Southwest of Changing Table is Baby's Floor.
-Blue blocks is in the Changing table but it is hidden.
+Blue blocks is in the Changing table but it is hidden. The description is "Hmm, I can use these to get to the crib".
 Instead of looking under the changing table for the first time:
 	now the blue blocks is in the changing table;
 	say "You found some legos!";
@@ -151,17 +151,20 @@ Instead of looking under the changing table for the first time:
 	now numLegos is numlegos + 3.
 	
 Crib is a room. 
-Your step-sibling is in the crib.
+Every turn when the player is in the Crib:
+	if the crib is visited and the crib was not visited:
+		say "INSERT FINAL BOSS STUFF HERE".
+Your step-sibling is in the crib. The description is "My step-sibling has telekinesis powers, that's how they made me so small, but why would they do such a thing...I love them. ".
 Instead of taking your step-sibling:
 	say "lets just leave them there".
 
-A locked, openable, lockable door called the crib pathway is north of the crib and south of the baby's floor.
+A locked, openable, lockable door called the crib pathway is north of the crib and south of the baby's floor. The description is "The only thing blocking my way to my step-sibling!".
 
-Every turn when the player is in the baby's floor:
+Every turn: 
+	if the baby's floor is visited and the baby's floor was not visited:
+		say "I see my step-sibling in the crib...If only I knew how to get up to the crib";
 	If numLegos is greater than 10:
 		say "With my Legos, I can create a staircase to the crib";
-		now the crib pathway is unlocked;
-	otherwise:
-		say "If only I knew how to get up there".
+		now the crib pathway is unlocked.
 
 Baby's Room is a region. Baby's Floor, Crib, Changing Table, Trash and Stuffed Animals is in Baby's Room.
