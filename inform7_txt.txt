@@ -10,7 +10,7 @@ After taking inventory when the number of things carried by the player is greate
 		say "  [numLegos] legos".
 		
 When play begins:
-	say "This will be the intro statement.".
+	say "You wake up, and you realized that your bed has gotten way bigger. Then, you realized that the bed did't get bigger but you have gotten smaller. You now want to investigate your house and try to find out why you have became so small. All you know is that the only person in your house this whole time is your two year old step-sibling.".
 		
 [your room]
 
