@@ -14,7 +14,10 @@ When play begins:
 		
 [your room]
 
-The Bed is a room.
+Every turn when the player is in the bed:
+	if the bed is visited and the bed was not visited:
+		say "Oh my god! I can't believe I shrunk! What am I going to do? How am I going to get help? I think I'm going to have a panic attack! What should I do? There is nobody I can get help from! The only other person in this house is my step-sibling! Should I go and try to get them in their room? Well I have nothing else to do! My parents mom won't be here for another week! I might as well try to make comfort with my step-sibling! How do I even get down from here?!".
+		
 A pillow is in The Bed. The description is "My comfy pillow...hmm what's that under it?".
 A string is in The Bed but the string is hidden. The description is "I bet I can use this string as rope!".
 Instead of taking the pillow:
@@ -44,11 +47,24 @@ Instead of taking Cereal Crumbs:
 	say "taken";
 	now numCrumbs is numCrumbs + 3.
 
+Every turn when the player is in the bedroom floor:
+	if the bedroom floor is visited and the bedroom floor was not visited:
+		say "Well I made it down in one piece! It feel like I just climed down a mountain! My room is a pigstyle with all these tings lying on the floor! I have an open bag of cereal, my school things are lying everywhere, and my dirty clothes are lying around too! Well in order to get to the baby's room, I need to get to the hallway, which is east of here, go down south to the end of the hallway, then east to the room. Hopefully I dont run into and bugs or mice!";
+	if the north hallway was visited and player is not carrying lint and player is not sticker:
+		say "I'm going to have to find something to put on my shoes in order to get in the hallway. Its just way to slippery!";
+	If player is carrying lint and player is not carrying sticker:
+		say "If only I can use something sticky to put on my shoe in order to get the lint on my shoe.";
+	If player is carrying sticker and player is not carrying lint:
+		say "Well if only I can use this sticker to so I can make shoes so I can have some traction control!";
+	If player is carrying sticker and player is carrying sticker:
+		say "YES! I can make traction control shoes! This will be perfect! I can now go in the hallway!".
+
 Bedroom Floor is a room. 
 A pencil is in the Bedroom Floor. The description is "This was my first #2 pencil that I have ever owned. My grandpapa gave it to me when he dropped me off to kindergarten.".
 Your computer is in the bedroom floor. The description is "My 2000 Dell computer with Window ME installed in it.".
-Your Expressive Processing book is in the bedroom floor. The description is "This is a great summer read!".
+Your Expressive Processing book is in the bedroom floor. The description is "This is a great summer read! I remembered that I put a sticker on the back of it!".
 A sticker is in the bedroom floor but it is hidden. The description is "This sticker has a very sticky residue that will make anything stick together.".
+A notebook is in the bedroom floor. The description is "My now giant college ruled notebook".
 Instead of looking under Your Expressive Processing book for the first time:
 	now the sticker is in the bedroom floor;
 	now the player is carrying a sticker;
@@ -64,6 +80,8 @@ Instead of taking your computer:
 Instead of taking the pencil:
 	say "I think I will just leave my [noun] here, it is way too big.".
 Instead of taking your expressive processing book:
+	say "I think I will just leave my [noun] here, it is way too big.".
+Instead of taking the notebook:
 	say "I think I will just leave my [noun] here, it is way too big.".
 
 Pile of Clothes is a room. South of the Pile of Clothes is the Bedroom Floor.
