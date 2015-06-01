@@ -148,6 +148,10 @@ The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Exit and Main Den is in 
 
 [baby's room]
 
+Every turn when the player is in the baby's floor:
+	if the baby's floor is visited and the baby's floor was not visited:
+		say "Well, Im finally here. I was only two door down, but it felt way more than that! I have traveled many piles of clothes, many crumbs of food, and I have defended myself from many enemies! The pray have become the hunter as I have not became the pray. The young now taken crontrol of the land as I lay wimpering. But now I should finish this once in for all. I have to climb up to the crib and fight my step-sibling! But how am I going to get up there? Maybe I should the things lying around the house.".
+
 Baby's Floor is a room. 
 
 Trash is a room. West of the Trash is the Baby's Floor.
@@ -171,7 +175,29 @@ Instead of looking under the changing table for the first time:
 Crib is a room. 
 Every turn when the player is in the Crib:
 	if the crib is visited and the crib was not visited:
-		say "INSERT FINAL BOSS STUFF HERE".
+		say "'Well we meet for the last time' said your step-sibling.
+		I see you are using your powers to talk to me. You know why I am here, so I can get my life back!
+		'Hahahahaha! Fool! I won't turn you back, after the many weggies, ear numbs, and head scruffles you have given me! This is payback!'
+		I'm sorry for all those things, but no many should live a life like this! I am going to have to fight you!
+		'Okay, try!'";
+Instead of fighting your step-sibling:
+	if a random chance of 1 in 2 succeeds:
+		say "Ouch you hit me! says the step-sibling!";
+	otherwise:
+		If a random chance of 1 in 4 succeeds:
+			say "This is useless, I'm going to have to strangle him!";
+		Otherwise:
+			say "Woah!";
+			say "Your step-sibling teleported you to the floor!";
+			now the player is in the baby's floor.
+Instead of strangling your step-sibling:
+	if a random chance of 1 in 2 succeeds:
+		say "'Hey! Get off of me! Wait, I'm feeling really tired! I...going......to.....go......sle.....'";
+		say "Wait...his head is shrinking! Did I just strangle the telekinesis out of him? What am I going to do now! I'm going to be small for the rest of my life! This can't be life! This can't be life!";
+		end the story;
+	otherwise:
+		say "Ouch!".
+
 Your step-sibling is in the crib. The description is "My step-sibling has telekinesis powers, that's how they made me so small, but why would they do such a thing...I love them. ".
 Instead of taking your step-sibling:
 	say "lets just leave them there".
@@ -179,10 +205,11 @@ Instead of taking your step-sibling:
 A locked, openable, lockable door called the crib pathway is north of the crib and south of the baby's floor. The description is "The only thing blocking my way to my step-sibling!".
 
 Every turn: 
-	if the baby's floor is visited and the baby's floor was not visited:
-		say "I see my step-sibling in the crib...If only I knew how to get up to the crib";
 	If numLegos is greater than 10:
 		say "With my Legos, I can create a staircase to the crib";
 		now the crib pathway is unlocked.
 
 Baby's Room is a region. Baby's Floor, Crib, Changing Table, Trash and Stuffed Animals is in Baby's Room.
+
+When play ends:
+	say "10 years later....".
