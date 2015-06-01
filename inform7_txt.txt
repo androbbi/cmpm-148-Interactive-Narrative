@@ -11,9 +11,9 @@ After taking inventory when the number of things carried by the player is greate
 		
 [your room]
 
-The Bed is a room. 
-A pillow is in The Bed.
-A string is in The Bed but the string is hidden.
+The Bed is a room.
+A pillow is in The Bed. The description is "My comfy pillow...hmm what's that under it?".
+A string is in The Bed but the string is hidden. The description is "I bet I can use this string as rope!".
 Instead of taking the pillow:
 	say "I think I will just leave my [noun] here, it is way too big.".
 Instead of looking under the pillow for the first time:
@@ -21,7 +21,7 @@ Instead of looking under the pillow for the first time:
 	now the player is carrying string;
 	say "You found a piece of string!";
 	say "You take the string.".
-A locked, openable, lockable door called the end of the bed is east of the bed and west of bedroom floor.
+A locked, openable, lockable door called the end of the bed is east of the bed and west of bedroom floor. The description is "It's a long way down to the bottom. I might not make it alive if I just jump off.".
 Every turn when the player is in the bed:
 	If player is carrying the string:
 		now the end of the bed is unlocked.
@@ -35,23 +35,23 @@ Instead of opening the end of the bed:
 		say "I can't get up there anymore.".
 	
 Cereal is a room. North of the Cereal is the Bedroom Floor.
-Cereal Crumbs is in Cereal.
+Cereal Crumbs is in Cereal. The description is "My favorite cereal! Maybe these will come in handy!".
 Instead of taking Cereal Crumbs:
 	remove Cereal Crumbs from play;
 	say "taken";
 	now numCrumbs is numCrumbs + 3.
 
 Bedroom Floor is a room. 
-A pencil is in the Bedroom Floor.
-Your computer is in the bedroom floor.
-Your Expressive Processing book is in the bedroom floor.
-A sticker is in the bedroom floor but it is hidden.
+A pencil is in the Bedroom Floor. The description is "This was my first #2 pencil that I have ever owned. My grandpapa gave it to me when he dropped me off to kindergarten.".
+Your computer is in the bedroom floor. The description is "My 2000 Dell computer with Window ME installed in it.".
+Your Expressive Processing book is in the bedroom floor. The description is "This is a great summer read!".
+A sticker is in the bedroom floor but it is hidden. The description is "This sticker has a very sticky residue that will make anything stick together.".
 Instead of looking under Your Expressive Processing book for the first time:
 	now the sticker is in the bedroom floor;
 	now the player is carrying a sticker;
 	say "You found a sticker underneath the book!";
 	say "You take the sticker.".
-Floor crumbs is in the bedroom floor.
+Floor crumbs is in the bedroom floor. The description is "Hmm, maybe these will come in handy.".
 Instead of taking floor Crumbs:
 	remove floor Crumbs from play;
 	say "taken";
@@ -64,12 +64,11 @@ Instead of taking your expressive processing book:
 	say "I think I will just leave my [noun] here, it is way too big.".
 
 Pile of Clothes is a room. South of the Pile of Clothes is the Bedroom Floor.
-lint is in pile of clothes.
+lint is in pile of clothes. The description is "This seems rough and durable. This is some grade A lint!".
 
-A openable door called your bedroom door is east of the bedroom floor and west of the north hallway.
+A openable door called your bedroom door is east of the bedroom floor and west of the north hallway. The description is "This will take me to the hallway.".
 
 Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in Your Room.
-
 
 [hallway]
 
