@@ -9,6 +9,9 @@ After taking inventory when the number of things carried by the player is greate
 	if numLegos is greater than zero:
 		say "  [numLegos] legos".
 		
+When play begins:
+	say "This will be the intro statement.".
+		
 [your room]
 
 The Bed is a room.
