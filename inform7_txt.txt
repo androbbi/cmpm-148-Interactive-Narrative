@@ -9,9 +9,17 @@ After taking inventory when the number of things carried by the player is greate
 	if numLegos is greater than zero:
 		say "  [numLegos] legos".
 		
+Strangling something is an activity.
+Strangling is an action applying to one visible thing.
+Understand "stangle [your step-sibling]" as strangling.
+
+Fighting something is an activity.
+Fighting is an action applying to one visible thing.
+Understand "fight [your step-sibling]" as fighting.
+
 When play begins:
-	say "You wake up, and you realized that your bed has gotten way bigger. Then, you realized that the bed did't get bigger but you have gotten smaller. You now want to investigate your house and try to find out why you have became so small. All you know is that the only person in your house this whole time is your two year old step-sibling.".
-		
+	say "You wake up, and you realized that your bed has gotten way bigger. Then, you realized that the bed did't get bigger but you have gotten smaller. You now want to investigate your house and try to find out why you have became so small. All you know is that the only person in your house this whole time is your two year old step-sibling. You must act quick because your parents asked you to babysit and you can't let them down.".
+
 [your room]
 
 Every turn when the player is in the bed:
@@ -22,6 +30,7 @@ A pillow is in The Bed. The description is "My comfy pillow...hmm what's that un
 A string is in The Bed but the string is hidden. The description is "I bet I can use this string as rope!".
 Instead of taking the pillow:
 	say "I think I will just leave my [noun] here, it is way too big.".
+[Took me a while to figure out, should we add more verbs?]
 Instead of looking under the pillow for the first time:
 	now the string is in the bed;
 	now the player is carrying string;
@@ -39,7 +48,7 @@ Instead of opening the end of the bed:
 		move player to the bedroom floor;
 	Otherwise:
 		say "I can't get up there anymore.".
-	
+[used east to move to the end of the bed, are there other actions?]	
 Cereal is a room. North of the Cereal is the Bedroom Floor.
 Cereal Crumbs is in Cereal. The description is "My favorite cereal! Maybe these will come in handy!".
 Instead of taking Cereal Crumbs:
@@ -49,7 +58,7 @@ Instead of taking Cereal Crumbs:
 
 Every turn when the player is in the bedroom floor:
 	if the bedroom floor is visited and the bedroom floor was not visited:
-		say "Well I made it down in one piece! It feel like I just climed down a mountain! My room is a pigstyle with all these tings lying on the floor! I have an open bag of cereal, my school things are lying everywhere, and my dirty clothes are lying around too! Well in order to get to the baby's room, I need to get to the hallway, which is east of here, go down south to the end of the hallway, then east to the room. Hopefully I dont run into and bugs or mice!";
+		say "Well I made it down in one piece! It feel like I just climed down a mountain! My room is a pigstyle with all these things lying on the floor! I have an open bag of cereal, my school things are lying everywhere, and my dirty clothes are lying around too! Well in order to get to the baby's room, I need to get to the hallway, which is east of here, go down south to the end of the hallway, then east to the room. Hopefully I dont run into any bugs or mice!";
 	if the north hallway was visited and player is not carrying lint and player is not sticker:
 		say "I'm going to have to find something to put on my shoes in order to get in the hallway. Its just way to slippery!";
 	If player is carrying lint and player is not carrying sticker:
@@ -94,6 +103,7 @@ Your Room is a region. The Bed, Cereal, Bedroom Floor and Pile of Clothes is in 
 [hallway]
 
 North Hallway is a room. South of the North Hallway is Middle Hallway.
+Your dog is in the North Hallway.
 Instead of taking your dog:
 	say "I think I will just leave my [noun] here, it is way too big.".
 Every turn when the player is in the North Hallway:
@@ -103,46 +113,45 @@ Every turn when the player is in the North Hallway:
 	Otherwise:
 		say "You see that the floor is slippery so you craft your own traction control shoes by using your sticker and lint.";
 
-Stairs is a room. 
-A locked door called the top of the stairs is west of the Stairs and east of North Hallway.
+Stairs is a room.  
+A locked door called the top of the stairs is west of the Stairs and east of North Hallway. The description is "Any attempt at climbing these stairs in your state and you'll probably break your ankles. You're hoping the answer to your problem is somewhere on this floor.".
 
-Every turn when the player is in the North Hallway:
-	If player is not carrying lint:
-		say "You try to go in the hallway, but it is way to slippery and you slip and slid back to your room";
-		move player to the bedroom floor.
-
-Shoes is a room. South of the Shoes is the North Hallway.
+Shoes is a room. South of the Shoes is the North Hallway. "Dang, these shoes reek, you're not sure why you climbed in here. No signs as to why you shrunk. Just you and a rather large stone."
+A large stone is in Shoes. The description is "You find a large stone inside your mom's shoe. Well, it looks large from your perspective. It seems you could craft this stone with your string."
 
 Middle Hallway is a room. South of the Middle Hallway is South Hallway.
 
-Tall Cactus is a room.
-A locked door called the base of the pot is west of the Middle Hallway and east of Tall Cactus.
+[Understand "craft [something] with [something]" as crafting. 
+		Crafting is an action applying to two things.
+		Carry out crafting: ...]
 
-A locked door called the entrance is east of the Middle Hallway and west of Mouse Hole.
+Tall Cactus is a room.
+A locked, openable door called the base of the pot is west of the Middle Hallway and east of Tall Cactus. The description is "The cactus that once reached to your shoulders now feels like a couple of stories high. At the end is a window, and you see the shadow of a figure. It sounds far-fetched but that may be the answer to your problem!".
+
+A locked, openable door called the entrance is east of the Middle Hallway and west of Mouse Hole. The description is "You've lived here for 6 months now and this is your first time seeing a mouse hole! Is it worth investigating, could the answer to your problems be here? Either way you will let your parents know there is a pest problem. As you walk in, a mouse runs towards you to greet you and you immediately run out. You won't be lunch today".
 
 South Hallway is a room.
 
 A Box of Legos is a room. North of the box of Legos is the south hallway.
-blocks is inside the box of legos.
+blocks is inside the box of legos. The description is "Hmm, I can use these to get to the crib".
 instead of taking blocks:
 	remove blocks from play;
 	say "legos taken";
 	now numLegos is numLegos + 5.
 
-A locked door called the baby's door is east of the south hallway and west of the baby's floor.
+A locked door called the baby's door is east of the south hallway and west of the baby's floor. The description is "This is your baby brother's room. There's no way to get in, but you're desperate to regain your normal size and you won't rest until you've checked every room on this floor.".
 
 The Main Hallway is a region. North Hallway, shoes, Stairs, Tall Cactus, a box of legos, Middle Hallway and South Hallway is in The Main Hallway.
 
-
 [mouse hole]
 
-Mouse Hole is a room.  East of Mouse Hole is the Main Den.
+Mouse Hole is a room.  East of Mouse Hole is the Main Den. "You have to be quick while the mouse is distracted.".
 
-Main Den is a room. West of Main Den is  the Mouse Hole.
+Main Den is a room. West of Main Den is  the Mouse Hole. "This seems to be the biggest room in the tunnel you're in. If you're knowledge of mice has taught you anything, its that you wish you knew about mice dens since you know absolutely nothing. You're assuming you're near the exit.".
 
-Nest is a room. South of Nest is the Main Den.
+Nest is a room. South of Nest is the Main Den. "Not entirely sure which fork in the road to take, you stumble upon the mice nest. You see a mother mouse nursing her babies. While this was cute the last time you were at the pet store, seeing these gigantic mice kind of freaks you out.".
 
-Narrow Exit is a room. West of Narrow Exit is Main Den. South of Narrow Exit is Stuffed Animals.
+Narrow Exit is a room. West of Narrow Exit is Main Den. South of Narrow Exit is Stuffed Animals. "You see a light at the end of the tunnel, but don't go towards the light! But you don't have much choice, so, go towards the light.".
 
 The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Exit and Main Den is in The Mouse Tunnel.
 
@@ -154,7 +163,7 @@ Every turn when the player is in the baby's floor:
 
 Baby's Floor is a room. 
 
-Trash is a room. West of the Trash is the Baby's Floor.
+Trash is a room. West of the Trash is the Baby's Floor. "This smells worse than the pair of shoes you hung out in, looks like you won't find your answers here. Unless desperate times call for desperate measures...".
 
 Stuffed Animals is a room. South of Stuffed Animals is the Baby's Floor.
 Red blocks is in the stuffed animals but it is hidden. The description is "Hmm, I can use these to get to the crib.".
