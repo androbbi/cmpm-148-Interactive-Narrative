@@ -184,7 +184,7 @@ The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Exit and Main Den is in 
 
 Every turn when the player is in the baby's floor:
 	now the baby's door is unlocked;
-	say "I can go north to the stuffed animals, north east to the changing table, east to the trash, south to the crib, or west to the south hallway.".
+	say "I can go north to the stuffed animals, north east to the changing table, east to the trash, south to the crib, or west to the south hallway.";
 	if the baby's floor is visited and the baby's floor was not visited:
 		say "Well, Im finally here. I was only two door down, but it felt way more than that! I have traveled many piles of clothes, many crumbs of food, and I have defended myself from many enemies! The pray have become the hunter as I have not became the pray. The young now taken crontrol of the land as I lay wimpering. But now I should finish this once in for all. I have to climb up to the crib and fight my step-sibling! But how am I going to get up there? Maybe I should the things lying around the house.";
 		say "I can now unlock the door from here.".
