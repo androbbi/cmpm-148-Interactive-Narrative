@@ -135,6 +135,14 @@ Every turn when the player is in the shoes:
 
 Middle Hallway is a room. South of the Middle Hallway is South Hallway.
 
+Understand "craft [string] with [large stone]" as crafting. 
+		Crafting is an action applying to two things.
+		Carry out crafting: remove string from play.
+		
+Understand "craft [large stone] with [string]" as crafting2. 
+		Crafting2 is an action applying to two things.
+		Carry out crafting2: remove string from play.
+
 Every turn when the player is in the middle Hallway:
 	say "I can go north to the north hallway, south to the south hallway, west to the tall cactus, or south to the mouse hole.".
 
