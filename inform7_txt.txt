@@ -170,15 +170,22 @@ The Main Hallway is a region. North Hallway, shoes, Stairs, Tall Cactus, a box o
 [mouse hole]
 
 Mouse Hole is a room.  East of Mouse Hole is the Main Den. "You have to be quick while the mouse is distracted.".
+Every turn when the player is in the Mouse Hole:
+	say "I can go west to the middle hallway or east to the main den.".
 
 Main Den is a room. West of Main Den is  the Mouse Hole. "This seems to be the biggest room in the tunnel you're in. If you're knowledge of mice has taught you anything, its that you wish you knew about mice dens since you know absolutely nothing. You're assuming you're near the exit.".
+Every turn when the player is in the main den:
+	say "I can go west to the mouse hole, north to the nest, or east to the narrow exit.".
 
 Nest is a room. South of Nest is the Main Den. "Not entirely sure which fork in the road to take, you stumble upon the mice nest. You see a mother mouse nursing her babies. While this was cute the last time you were at the pet store, seeing these gigantic mice kind of freaks you out.".
+Every turn when the player is in the nest:
+	say "I can go south to the main den.".
 
 Narrow Exit is a room. West of Narrow Exit is Main Den. South of Narrow Exit is Stuffed Animals. "You see a light at the end of the tunnel, but don't go towards the light! But you don't have much choice, so, go towards the light.".
+Every turn when the player is in the narrow exit:
+	say "I can go west to the main den, or south to the stuffed animals inside the baby's room.".
 
 The Mouse Tunnel is a region. Mouse Hole , Nest, Narrow Exit and Main Den is in The Mouse Tunnel.
-
 
 [baby's room]
 
