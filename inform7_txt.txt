@@ -59,7 +59,7 @@ Instead of taking Cereal Crumbs:
 	remove Cereal Crumbs from play;
 	say "taken";
 	now numCrumbs is numCrumbs + 3.
-Every turn when the player is in the bedroom floor:
+Every turn when the player is in the cereal:
 	say "I can go north to go back in the bedroom floor.".
 
 Every turn when the player is in the bedroom floor:
