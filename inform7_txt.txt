@@ -22,6 +22,15 @@ Understand "fight [your step-sibling]" as fighting.
 Understand "lift [something]" as looking under.
 Understand "move [something]" as looking under.
 
+A thing can be examined or unexamined. 
+
+After taking something unexamined: 
+	say "[run paragraph on]"; 
+	try examining the noun. 
+
+Carry out examining something: 
+	now the noun is examined. 
+
 When play begins:
 	say "You wake up, and you realized that your bed has gotten way bigger. Then, you realized that the bed did't get bigger but you have gotten smaller. You now want to investigate your house and try to find out why you have became so small. All you know is that the only person in your house this whole time is your two year old step-sibling. You must act quick because your parents asked you to babysit and you can't let them down.
 	
@@ -146,13 +155,21 @@ carry out directions:
 	if player is in shoes:
 		say "I can go south to go back to the north hallway.".
 
+A Grappling Hook is in Shoes but the Grappling Hook is hidden. The description of the Grappling Hook is "You made a grappling hook out of string and stone! Smart! You should be able to climb higher places now!".
+
 Middle Hallway is a room. South of the Middle Hallway is South Hallway.
+
 Understand "craft [string] with [large stone]" as crafting. 
 		Crafting is an action applying to two things.
 		Carry out crafting: remove string from play.
+		Carry out crafting: remove large stone from play.
+		Carry out crafting:  now the player is carrying grappling hook.
+		
 Understand "craft [large stone] with [string]" as crafting2. 
 		Crafting2 is an action applying to two things.
 		Carry out crafting2: remove string from play.
+		Carry out crafting2: remove large stone from play.
+		Carry out crafting2:  now the player is carrying grappling hook.
 carry out directions:
 	if player is in middle hallway:
 		say "I can go north to the north hallway, south to the south hallway, west to the tall cactus, or south to the mouse hole.".
