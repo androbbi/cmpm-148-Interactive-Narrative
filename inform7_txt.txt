@@ -10,7 +10,7 @@ After taking inventory when the number of things carried by the player is greate
 		say "  [numCrumbs] crumbs";
 	if numLegos is greater than zero:
 		say "  [numLegos] legos".
-		
+[push comment]		
 Strangling something is an activity.
 Strangling is an action applying to one visible thing.
 Understand "stangle [your step-sibling]" as strangling.
